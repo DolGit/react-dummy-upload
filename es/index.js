@@ -10,13 +10,10 @@ import PropTypes from 'prop-types';
 var ReactDummyUpload = function (_React$Component) {
     _inherits(ReactDummyUpload, _React$Component);
 
-    function ReactDummyUpload(props) {
+    function ReactDummyUpload() {
         _classCallCheck(this, ReactDummyUpload);
 
-        var _this = _possibleConstructorReturn(this, _React$Component.call(this, props));
-
-        _this.state = {};
-        return _this;
+        return _possibleConstructorReturn(this, _React$Component.apply(this, arguments));
     }
 
     ReactDummyUpload.prototype.loading = function loading() {
@@ -31,22 +28,18 @@ var ReactDummyUpload = function (_React$Component) {
         return React.createElement(
             'div',
             { className: this.props.className, onClick: this.onClick },
-            this.props.loading ? this.loading() : normal(),
-            this.props.loading && React.createElement(SvgIcon, { name: 'eduian-icon-spinner-light',
-                color: variables.eduianGreen,
-                title: 'Loading',
-                className: 'image-spin' }),
-            !this.props.loading && React.createElement('img', { src: this.props.account.photo.large.url, className: 'profile-page-img' })
+            this.props.loading ? this.loading() : normal()
         );
     };
 
     return ReactDummyUpload;
 }(React.Component);
 
-OmniLink.propTypes = {
-    href: PropTypes.string,
-    to: PropTypes.string,
-    link: PropTypes.oneOfType([PropTypes.object.isRequired, PropTypes.bool.isRequired])
-};
+ReactDummyUpload.propTypes = process.env.NODE_ENV !== "production" ? {
+    className: PropTypes.string,
+    onClick: PropTypes.func,
+    loading: PropTypes.string,
+    whenLoading: PropTypes.object
+} : {};
 
-export default OmniLink;
+export default ReactDummyUpload;
