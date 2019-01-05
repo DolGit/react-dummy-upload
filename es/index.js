@@ -38,7 +38,7 @@ var ReactDummyUpload = function (_React$Component) {
 ReactDummyUpload.propTypes = process.env.NODE_ENV !== "production" ? {
     className: PropTypes.string,
     onClick: PropTypes.func,
-    loading: PropTypes.string,
+    loading: PropTypes.oneOfType([PropTypes.string.isRequired, PropTypes.bool.isRequired]),
     whenLoading: PropTypes.object
 } : {};
 

@@ -22,7 +22,10 @@ class ReactDummyUpload extends React.Component {
 ReactDummyUpload.propTypes = {
     className: PropTypes.string,
     onClick: PropTypes.func,
-    loading: PropTypes.string,
+    loading:   PropTypes.oneOfType([
+        PropTypes.string.isRequired,
+        PropTypes.bool.isRequired
+    ]),
     whenLoading: PropTypes.object,
 };
 
