@@ -13,7 +13,7 @@ class ReactDummyUpload extends React.Component {
     render() {
         return (
             <div className={this.props.className} onClick={this.onClick}>
-                {this.props.loading ? this.loading() : normal()}
+                {this.props.loading ? this.loading() : this.normal()}
             </div>
         )
     }

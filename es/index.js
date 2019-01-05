@@ -28,7 +28,7 @@ var ReactDummyUpload = function (_React$Component) {
         return React.createElement(
             'div',
             { className: this.props.className, onClick: this.onClick },
-            this.props.loading ? this.loading() : normal()
+            this.props.loading ? this.loading() : this.normal()
         );
     };
 
