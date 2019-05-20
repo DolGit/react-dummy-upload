@@ -1,6 +1,6 @@
 {
   "name": "@dolnpm/react-dummy-upload",
-  "version": "0.1.4-development",
+  "version": "0.1.5-development",
   "description": "React component for toggling a loading screen while a file is uploading. Works well with https://github.com/DolGit/dummy-uploader",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -20,7 +20,7 @@
     "semantic-release": "semantic-release",
     "travis-deploy-once": "travis-deploy-once"
   },
-  "dependencies": {
+  "peerDependencies": {
     "prop-types": "*",
     "react": "*"
   },
